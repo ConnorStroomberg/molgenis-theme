@@ -1,0 +1,24 @@
+{
+  "name": "boot-theme",
+  "version": "1.0.0",
+  "description": "try some sass compilation",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-task:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o dist/css",
+    "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
+    "dev": "npm-run-all -p sass:*"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "bootstrap": "^4.0.0",
+    "chokidar-cli": "^1.2.0",
+    "jquery": "^3.3.1",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.2",
+    "popper.js": "^1.12.9",
+    "postcss-cli": "^4.1.1"
+  }
+}

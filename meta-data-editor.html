@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="dist/css/molgenis.css">
+  <link rel="stylesheet" href="test/css/header.css">
+  <link rel="stylesheet" href="test/css/meta-data-editor.css">
+  <title>Molgenis Theme MDE</title>
+</head>
+
+<body>
+  <header id="molgenis-header-container" class="fixed-top">
+    <nav role="navigation" class="navbar navbar-expand-md navbar-light bg-light"><a href="/menu/main/home" class="navbar-brand"><img src="https://molgenis01.gcc.rug.nl/img/logo_molgenis_small.png"></a> <button type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
+        aria-label="Toggle navigation" class="navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button>
+      <div id="navbar-content" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link">
+                  Navigator
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="/meta-data-editor.html" class="nav-link">
+                  Meta editor
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav justify-content">
+          <!---->
+        </ul>
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            <a href="https://molgenis.gitbooks.io/molgenis/content/" target="_blank" class="nav-link">
+                Help
+            </a>
+          </li>
+          <li class="nav-item">
+            <form id="logout-form" method="post" action="/logout" class="navbar-form">
+              <button id="signout-button" type="button" class="btn btn-outline-secondary">
+                  Sign out
+              </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="login-modal-container-header"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alerts">
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="plugin-container">
+
+          <div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="col-md-4 col-sm-12 col-xs-12">
+                    <h2>Metadata manager</h2></div>
+                  <div class="col-md-4 col-sm-10 col-xs-10">
+                    <div tabindex="-1" class="multiselect">
+                      <div class="multiselect__select"></div>
+                      <div class="multiselect__tags">
+                        <!---->
+                        <div class="multiselect__spinner" style="display: none;"></div> <input type="text" autocomplete="off" placeholder="Select an Entity" class="multiselect__input">
+                        <!---->
+                      </div>
+                      <ul class="multiselect__content" style="max-height: 300px; display: none;">
+                        <!---->
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option multiselect__option--highlight"><span>1000 Genomes annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Amazon Bucket file ingest job execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Annotation job execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>App</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Application settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Attribute</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Attribute mapping</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Authentication settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Authority</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon dataset</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon organization</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Cadd annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>CGD annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Clinvar annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Dann annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Data explorer settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Entity mapping</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Entity type</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Exac annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>File ingest job execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>File metadata</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Fitcon annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Freemarker template</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Gavin annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Gavin job execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Genome Browser Attributes</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Genome Browser Settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>GoNL annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Group</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Group authority</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Group member</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>HPO annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Import</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Index action</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Index action group</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Index job execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Job execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Language</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Localization</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Mail sender properties.</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Mail settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Mapping Job Execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Mapping project</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Mapping target</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Matching task content</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Negotiator Config</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Negotiator Entity Config</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>OMIM annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>One click import job execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Ontology</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Ontology term</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Ontology term dynamic annotation</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Ontology term hit</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Ontology term node path</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Ontology term synonym</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>OpenCPU settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Owned</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Package</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Plugin</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Property</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Questionnaire</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Recovery Code</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Scheduled job</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Scheduled Job Type</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Script</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Script job execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Script parameter</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Script type</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>SnpEff annotator settings</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>SORTA job execution</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Static content</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>StyleSheet</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Tag</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Term frequency</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Token</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>User</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>User authority</span></span>
+                          <!---->
+                        </li>
+                        <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>User Secret</span></span>
+                          <!---->
+                        </li>
+                        <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-2 col-xs-2"><button class="btn btn-primary"><i class="fa fa-plus"></i></button></div>
+                </div>
+                <hr>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col">
+                  <div>
+                    <div>
+                      <div class="row">
+                        <div class="col-md-4 col-sm-12 col-xs-12 inner-column">
+                          <div class="form-group row"><label class="col-4 col-form-label text-muted">Extends</label>
+                            <div class="col">
+                              <div tabindex="-1" class="multiselect">
+                                <div class="multiselect__select"></div>
+                                <div class="multiselect__tags">
+                                  <!---->
+                                  <div class="multiselect__spinner" style="display: none;"></div> <input type="text" autocomplete="off" placeholder="Select an Entity..." class="multiselect__input">
+                                  <!---->
+                                </div>
+                                <ul class="multiselect__content" style="max-height: 300px; display: none;">
+                                  <!---->
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option multiselect__option--highlight"><span>Authority</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Job execution</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Matching task content</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Owned</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Property</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Questionnaire</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Settings</span></span>
+                                    <!---->
+                                  </li>
+                                  <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row"><label class="col-4 col-form-label text-muted">Abstract</label>
+                            <div class="col checkbox-column"><input type="checkbox" class="form-control"></div>
+                          </div>
+                          <div class="form-group-row float-right"><button type="button" disabled="disabled" class="btn btn-success ">
+          Save all changes
+        </button> <button class="btn btn-danger">
+          Delete entity
+        </button></div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12 inner-column">
+                          <div class="form-group row"><label class="col-4 col-form-label text-muted">Label</label>
+                            <div class="col"><input type="text" placeholder="Add a label..." class="form-control"></div>
+                          </div>
+                          <div class="form-group row"><label class="col-4 col-form-label text-muted">Description</label>
+                            <div class="col"><input type="text" placeholder="Add a description..." class="form-control"></div>
+                          </div>
+                          <div class="form-group row"><label class="col-4 col-form-label text-muted">Package</label>
+                            <div class="col">
+                              <div tabindex="-1" class="multiselect">
+                                <div class="multiselect__select"></div>
+                                <div class="multiselect__tags">
+                                  <!---->
+                                  <div class="multiselect__spinner" style="display: none;"></div> <input type="text" autocomplete="off" placeholder="Select a Package..." class="multiselect__input">
+                                  <!---->
+                                </div>
+                                <ul class="multiselect__content" style="max-height: 300px; display: none;">
+                                  <!---->
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option multiselect__option--highlight"><span>Beacons</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Default</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Genome Browser</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Index</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Jobs</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Mail</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Mapper</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Meta</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Negotiator</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Ontology</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Script</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Security</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Settings</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>System</span></span>
+                                    <!---->
+                                  </li>
+                                  <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12 outer-column">
+                          <div class="form-group row"><label class="col-4 col-form-label text-muted">ID Attribute</label>
+                            <div class="col">
+                              <div tabindex="-1" class="multiselect">
+                                <div class="multiselect__select"></div>
+                                <div class="multiselect__tags">
+                                  <!---->
+                                  <div class="multiselect__spinner" style="display: none;"></div> <input type="text" autocomplete="off" placeholder="Select an attribute..." class="multiselect__input">
+                                  <!---->
+                                </div>
+                                <ul class="multiselect__content" style="max-height: 300px; display: none;">
+                                  <!---->
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option multiselect__option--highlight"><span>Beacon identifier</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon name</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>API version</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon organization</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon description</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon version</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Welcome URL</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon datasets</span></span>
+                                    <!---->
+                                  </li>
+                                  <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row"><label class="col-4 col-form-label text-muted">Label attribute</label>
+                            <div class="col">
+                              <div tabindex="-1" class="multiselect">
+                                <div class="multiselect__select"></div>
+                                <div class="multiselect__tags">
+                                  <!---->
+                                  <div class="multiselect__spinner" style="display: none;"></div> <input type="text" autocomplete="off" placeholder="Select an attribute..." class="multiselect__input">
+                                  <!---->
+                                </div>
+                                <ul class="multiselect__content" style="max-height: 300px; display: none;">
+                                  <!---->
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option multiselect__option--highlight"><span>Beacon identifier</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon name</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>API version</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon organization</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon description</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon version</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Welcome URL</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon datasets</span></span>
+                                    <!---->
+                                  </li>
+                                  <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row"><label class="col-4 col-form-label text-muted">Lookup attributes</label>
+                            <div class="col">
+                              <div tabindex="-1" class="multiselect">
+                                <div class="multiselect__select"></div>
+                                <div class="multiselect__tags">
+                                  <!---->
+                                  <div class="multiselect__spinner" style="display: none;"></div> <input type="text" autocomplete="off" placeholder="Select attributes..." class="multiselect__input">
+                                  <!---->
+                                </div>
+                                <ul class="multiselect__content" style="max-height: 300px; display: none;">
+                                  <!---->
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option multiselect__option--highlight"><span>Beacon identifier</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon name</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>API version</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon organization</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon description</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon version</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Welcome URL</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>Beacon datasets</span></span>
+                                    <!---->
+                                  </li>
+                                  <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-md-3 attribute-tree">
+                      <div class="row">
+                        <div class="col"><strong>Attributes</strong> <button class="btn btn-primary btn-sm float-right"><i class="fa fa-plus"></i></button></div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col">
+                          <div role="toolbar" aria-label="Toolbar with button groups" class="btn-toolbar float-right">
+                            <div role="group" class="btn-group mr-2"><button disabled="disabled" class="btn btn-secondary btn-sm"><i class="fa fa-chevron-up"></i></button> <button class="btn btn-secondary btn-sm"><i class="fa fa-chevron-down"></i></button></div>
+                            <div role="group" class="btn-group"><button class="btn btn-danger float-right btn-sm"><i class="fa fa-trash-o"></i></button></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div selectedattribute="[object Object]">
+                        <ul class="fa-ul">
+                          <div>
+                            <li><span class="selected-attribute-node node-content"><i class="fa fa-columns"></i> Beacon identifier
+  </span>
+                              <!---->
+                            </li>
+                            <li><span class="node-content"><i class="fa fa-columns"></i> Beacon name
+  </span>
+                              <!---->
+                            </li>
+                            <li><span class="node-content"><i class="fa fa-columns"></i> API version
+  </span>
+                              <!---->
+                            </li>
+                            <li><span class="node-content"><i class="fa fa-columns"></i> Beacon organization
+  </span>
+                              <!---->
+                            </li>
+                            <li><span class="node-content"><i class="fa fa-columns"></i> Beacon description
+  </span>
+                              <!---->
+                            </li>
+                            <li><span class="node-content"><i class="fa fa-columns"></i> Beacon version
+  </span>
+                              <!---->
+                            </li>
+                            <li><span class="node-content"><i class="fa fa-columns"></i> Welcome URL
+  </span>
+                              <!---->
+                            </li>
+                            <li><span class="node-content"><i class="fa fa-columns"></i> Beacon datasets
+  </span>
+                              <!---->
+                            </li>
+                          </div>
+                        </ul>
+                      </div>
+                      <!---->
+                    </div>
+                    <div class="col-md-9">
+                      <div class="row">
+                        <div class="col attribute-form-header"><strong>Attribute:</strong> Beacon identifier
+                          <hr>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row"><label class="col-3 col-form-label text-muted">Name</label>
+                            <div class="col"><input type="text" placeholder="Add a unique name..." class="form-control"></div>
+                          </div>
+                          <div class="form-group row"><label class="col-3 col-form-label text-muted">Label</label>
+                            <div class="col"><input type="text" placeholder="Add a label..." class="form-control"></div>
+                          </div>
+                          <div class="form-group row"><label class="col-3 col-form-label text-muted">Description</label>
+                            <div class="col"><textarea rows="2" placeholder="Add a description..." class="form-control"></textarea></div>
+                          </div>
+                          <div class="form-group row"><label class="col-3 col-form-label text-muted">Type</label>
+                            <div class="col">
+                              <div tabindex="-1" class="multiselect">
+                                <div class="multiselect__select"></div>
+                                <div class="multiselect__tags">
+                                  <!---->
+                                  <div class="multiselect__spinner" style="display: none;"></div> <input type="text" autocomplete="off" placeholder="Select an attribute type..." class="multiselect__input">
+                                  <!---->
+                                </div>
+                                <ul class="multiselect__content" style="max-height: 300px; display: none;">
+                                  <!---->
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option multiselect__option--highlight"><span>bool</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>categorical</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>categoricalmref</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>compound</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>date</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>datetime</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>decimal</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>email</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>enum</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>file</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>html</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>hyperlink</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>int</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>long</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>mref</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>onetomany</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>script</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option multiselect__option--selected"><span>string</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>text</span></span>
+                                    <!---->
+                                  </li>
+                                  <li class="multiselect__element"><span tabindex="0" data-select="" data-selected="Selected" data-deselect="" class="multiselect__option"><span>xref</span></span>
+                                    <!---->
+                                  </li>
+                                  <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row"><label class="col-3 col-form-label text-muted">Parent</label>
+                            <div class="col">
+                              <div tabindex="-1" class="multiselect">
+                                <div class="multiselect__select"></div>
+                                <div class="multiselect__tags">
+                                  <!---->
+                                  <div class="multiselect__spinner" style="display: none;"></div> <input type="text" autocomplete="off" placeholder="Select a compound attribute..." class="multiselect__input">
+                                  <!---->
+                                </div>
+                                <ul class="multiselect__content" style="max-height: 300px; display: none;">
+                                  <!---->
+                                  <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!---->
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group row"><label class="col-6 col-form-label text-muted">Nullable</label>
+                            <div class="col checkbox-column"><input type="checkbox" class="form-control"></div>
+                          </div>
+                          <div class="form-group row"><label class="col-6 col-form-label text-muted">Auto</label>
+                            <div class="col checkbox-column"><input type="checkbox" class="form-control"></div>
+                          </div>
+                          <div class="form-group row"><label class="col-6 col-form-label text-muted">Visible</label>
+                            <div class="col checkbox-column"><input type="checkbox" class="form-control"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group row"><label class="col-6 col-form-label text-muted">Unique</label>
+                            <div class="col checkbox-column"><input type="checkbox" class="form-control"></div>
+                          </div>
+                          <div class="form-group row"><label class="col-6 col-form-label text-muted">Read-only</label>
+                            <div class="col checkbox-column"><input type="checkbox" class="form-control"></div>
+                          </div>
+                          <div class="form-group row"><label class="col-6 col-form-label text-muted">Aggregatable</label>
+                            <div class="col checkbox-column"><input type="checkbox" class="form-control"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group"><label class="text-muted">Computed value expression</label> <textarea rows="3" placeholder="Example: attributeX - attributeY" class="form-control"></textarea></div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group"><label class="text-muted">Visible expression</label> <textarea rows="3" placeholder="Example: $('attributeX').value() > 5" class="form-control"></textarea></div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group"><label class="text-muted">Validation expression</label> <textarea rows="3" placeholder="Example: $('attributeX').isNull().not()" class="form-control"></textarea></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="font-italic text-muted text-center">
+        <!---->
+
+        This database was generated using the open source <a href="https://www.molgenis.org">MOLGENIS database generator</a> <span>6.1.0-SNAPSHOT</span> <span>built on 2018-02-03 01:12 UTC.</span> <br> Please cite <a href="https://www.ncbi.nlm.nih.gov/pubmed/21210979">Swertz et al (2010)</a>        or <a href="https://www.ncbi.nlm.nih.gov/pubmed/17297480">Swertz &amp; Jansen (2007)</a> on use.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

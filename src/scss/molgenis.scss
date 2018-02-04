@@ -1,0 +1,10 @@
+// Custom.scss
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-size-base:              0.875rem !default; // Assumes the browser default, typically `16px`
+
+
+// Option A: Include all of Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
