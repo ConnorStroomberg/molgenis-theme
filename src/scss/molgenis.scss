@@ -29,6 +29,12 @@
  	font-style:normal
  }
 
+ // Colors
+$main-green: #5dffac !default;
+$light-gray: #fafafa !default;
+$white: #ffffff !default;
+$light: $white !default;
+
 // Font, line-height, and color for body text, headings, and more.
 $font-family-sans-serif: "IBM_Plex_sans";
 $font-size-base: 1rem !default; // 0.875rem !default; // Assumes the browser default, typically `16px`
@@ -36,16 +42,24 @@ $font-size-base: 1rem !default; // 0.875rem !default; // Assumes the browser def
 $headings-font-family: "bebas_neueregular" !default;
 $headings-font-weight: 500 !default;
 
-$light-gray: #fafafa !default;
-$white: #ffffff !default;
-
-$light: $white !default;
-
-
 // Body
-//
-// Settings for the `<body>` element.
 $body-bg: $light-gray !default;
+
+// Table
+$table-bg: $white !default;
+
+// Page
+.mg-page-banner {
+	background-color: $main-green;
+	h1 {
+		margin-top: 22px;
+		margin-bottom: 22px;
+	}
+}
+
+.mg-plugin-container {
+	padding-top: 2rem;
+}
 
 
 // Option A: Include all of Bootstrap
