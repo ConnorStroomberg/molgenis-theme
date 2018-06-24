@@ -19,6 +19,16 @@
     font-style: normal;
 }
 
+ @font-face {
+ 	font-family:'FontAwesome';
+ 	src:url(/fonts/fontawesome-webfont.674f50d.eot);
+ 	src:url(/fonts/fontawesome-webfont.674f50d.eot?#iefix&v=4.7.0) format('embedded-opentype'), 
+ 	url(/fonts/fontawesome-webfont.af7ae50.woff2) format('woff2'),url(/fonts/fontawesome-webfont.fee66e7.woff) format('woff'),
+ 	url(/fonts/fontawesome-webfont.b06871f.ttf) format('truetype'),url(/img/fontawesome-webfont.912ec66.svg#fontawesomeregular) format('svg');
+ 	font-weight:normal;
+ 	font-style:normal
+ }
+
 // Font, line-height, and color for body text, headings, and more.
 $font-family-sans-serif: "IBM_Plex_sans";
 $font-size-base: 1rem !default; // 0.875rem !default; // Assumes the browser default, typically `16px`
@@ -26,17 +36,16 @@ $font-size-base: 1rem !default; // 0.875rem !default; // Assumes the browser def
 $headings-font-family: "bebas_neueregular" !default;
 $headings-font-weight: 500 !default;
 
-$light-gray:    #fafafa !default;
-$white:         #ffffff !default;
+$light-gray: #fafafa !default;
+$white: #ffffff !default;
 
-$light:         $white !default;
+$light: $white !default;
 
 
 // Body
 //
 // Settings for the `<body>` element.
-
-$body-bg:                   $light-gray !default;
+$body-bg: $light-gray !default;
 
 
 // Option A: Include all of Bootstrap
