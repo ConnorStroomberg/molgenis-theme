@@ -1,81 +1,87 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+    </style>
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="dist/css/molgenis.css">
-  <link rel="stylesheet" href="test/css/header.css">
-  <link rel="stylesheet" href="test/css/navigator.css">
-  <title>Molgenis Theme</title>
-</head>
-
-<body>
-  <header id="molgenis-header-container" class="fixed-top">
-    <!---->
-    <nav role="navigation" class="navbar navbar-expand-md navbar-light bg-light"><a href="/menu/main/home" class="navbar-brand"><img src="https://molgenis01.gcc.rug.nl/img/logo_molgenis_small.png"></a> <button type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
-        aria-label="Toggle navigation" class="navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button>
-      <div id="navbar-content" class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a href="/index.html" class="nav-link">
+    <link rel="stylesheet" href="dist/css/molgenis.css">
+    <link rel="stylesheet" href="test/css/header.css">
+    <link rel="stylesheet" href="test/css/navigator.css">
+    <link rel="stylesheet" href="test/css/font-awesome.min.css">
+    <title>Molgenis Theme</title>
+  </head>
+  <body>
+    <header id="molgenis-header-container" class="fixed-top">
+      <!---->
+      <nav role="navigation" class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+          <a href="/menu/main/home" class="navbar-brand">
+            <img src="https://molgenis01.gcc.rug.nl/img/logo_molgenis_small.png">
+          </a>
+          <button type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse justify-content-end">
+            <ul class="nav">
+              <li class="nav-item active">
+                <a href="/index.html" class="nav-link">
                   Navigator
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/meta-data-editor.html" class="nav-link">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/meta-data-editor.html" class="nav-link">
                   Meta editor
-            </a>
-          </li>
-        </ul>
-        <ul class="navbar-nav justify-content">
-          <!---->
-        </ul>
-        <ul class="navbar-nav justify-content-end">
-          <li class="nav-item">
-            <a href="https://molgenis.gitbooks.io/molgenis/content/" target="_blank" class="nav-link">
-                Help
-            </a>
-          </li>
-          <li class="nav-item">
-            <form id="logout-form" method="post" action="/logout" class="navbar-form">
-              <button id="signout-button" type="button" class="btn btn-outline-secondary">
-                  Sign out
-              </button>
-            </form>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div id="login-modal-container-header"></div>
-      </div>
-    </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://molgenis.gitbooks.io/molgenis/content/" target="_blank" class="nav-link">
+                  Help
+                </a>
+              </li>
+              <li class="nav-item">
+                 <a href="http://google.com" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> Sign out</a>
+              </li>
+            </ul>
+          </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <div class="alerts">
+        </div>
+      </nav>
+    </header>
 
+    <div class="mg-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-uppercase"">Data Navigator</h1>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="plugin-container">
-
-
-          <div>
-            <!---->
-            <div class="navigator-search row justify-content-center">
-              <div class="input-group col-lg-6"><input type="text" placeholder="Search packages and data ..." class="form-control">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="login-modal-container-header"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alerts">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="plugin-container" class="mg-plugin-container">
+            <div>
+              <!---->
+              <div class="navigator-search row justify-content-center">
+                <div class="input-group col-lg-6"><input type="text" placeholder="Search packages and data ..." class="form-control">
                 <div class="input-group-append"><button disabled="disabled" type="button" class="btn btn-outline-secondary">Search
-          </button> <button disabled="disabled" type="button" class="btn btn-outline-secondary">Clear
-          </button></div>
+                  </button> <button disabled="disabled" type="button" class="btn btn-outline-secondary">Clear
+                </button></div>
               </div>
             </div>
             <div class="navigator-path row">
@@ -100,12 +106,12 @@
                 <!---->
                 <tr class="">
                   <td aria-colindex="1" class="text-nowrap"><span><a href="/menu/main/navigator/base" class=""><i aria-hidden="true" class="fa fa-folder-open-o"></i> Default
-          </a></span></td>
+                  </a></span></td>
                   <td aria-colindex="2" class="hidden-sm-down">Default packages for new entities</td>
                 </tr>
                 <tr class="">
                   <td aria-colindex="1" class="text-nowrap"><span><a href="/menu/main/navigator/sys" class=""><i aria-hidden="true" class="fa fa-folder-open-o"></i> System
-          </a></span></td>
+                  </a></span></td>
                   <td aria-colindex="2" class="hidden-sm-down">Package containing all system entities</td>
                 </tr>
                 <!---->
@@ -113,12 +119,9 @@
               </tbody>
             </table>
           </div>
-
         </div>
       </div>
     </div>
   </div>
-
 </body>
-
 </html>

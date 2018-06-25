@@ -1,5 +1,5 @@
-body > .container-fluid {
-    padding-top: 120px;
+body {
+    padding-top: 56px;
 }
 
 .nav-link.dropdown-toggle:hover {

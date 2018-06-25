@@ -1,9 +1,65 @@
 // Custom.scss
 
 // Fonts
-//
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('/fonts/BebasNeue/BebasNeue-Regular.ttf') format('ttf'),
+         url('/fonts/BebasNeue/BebasNeue-Regular.woff2') format('woff2'),
+         url('/fonts/BebasNeue/BebasNeue-Regular.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM_Plex_sans';
+    src: url('/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf') format('ttf'),
+     	 url('/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.woff2') format('woff2'),
+         url('/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+ @font-face {
+ 	font-family:'FontAwesome';
+ 	src:url(/fonts/fontawesome-webfont.674f50d.eot);
+ 	src:url(/fonts/fontawesome-webfont.674f50d.eot?#iefix&v=4.7.0) format('embedded-opentype'), 
+ 	url(/fonts/fontawesome-webfont.af7ae50.woff2) format('woff2'),url(/fonts/fontawesome-webfont.fee66e7.woff) format('woff'),
+ 	url(/fonts/fontawesome-webfont.b06871f.ttf) format('truetype'),url(/img/fontawesome-webfont.912ec66.svg#fontawesomeregular) format('svg');
+ 	font-weight:normal;
+ 	font-style:normal
+ }
+
+ // Colors
+$main-green: #5dffac !default;
+$light-gray: #fafafa !default;
+$white: #ffffff !default;
+$light: $white !default;
+
 // Font, line-height, and color for body text, headings, and more.
-$font-size-base:              0.875rem !default; // Assumes the browser default, typically `16px`
+$font-family-sans-serif: "IBM_Plex_sans";
+$font-size-base: 1rem !default; // 0.875rem !default; // Assumes the browser default, typically `16px`
+
+$headings-font-family: "bebas_neueregular" !default;
+$headings-font-weight: 500 !default;
+
+// Body
+$body-bg: $light-gray !default;
+
+// Table
+$table-bg: $white !default;
+
+// Page
+.mg-page-banner {
+	background-color: $main-green;
+	h1 {
+		margin-top: 22px;
+		margin-bottom: 22px;
+	}
+}
+
+.mg-plugin-container {
+	padding-top: 2rem;
+}
 
 
 // Option A: Include all of Bootstrap
